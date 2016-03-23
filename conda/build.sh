@@ -1,5 +1,5 @@
 #!/bin/bash
-
+MACOSX_DEPLOYMENT_TARGET=10.7
 INCLUDE_PATH=$PREFIX/include
 LIBRARY_PATH=$PREFIX/lib
 
@@ -33,8 +33,8 @@ if [ `uname` == Darwin ]; then
   
   # If we want C++11 support, we need to enable these flags
   # AND change the version min >= 10.7
-  #CXXFLAGS="${CXXFLAGS} -std=c++11 -stdlib=libc++"
-  #LINKFLAGS="${LINKFLAGS} -stdlib=libc++"
+  CXXFLAGS="${CXXFLAGS} -std=c++11 -stdlib=libc++"
+  LINKFLAGS="${LINKFLAGS} -stdlib=libc++"
   
   CXXFLAGS="cxxflags=${CXXFLAGS}"
   LINKFLAGS="linkflags=${LINKFLAGS}"
