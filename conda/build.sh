@@ -39,7 +39,7 @@ if [ `uname` == Darwin ]; then
   CXXFLAGS="cxxflags=${CXXFLAGS}"
   LINKFLAGS="linkflags=${LINKFLAGS}"
 else
-  CXXFLAGS=""
+  CXXFLAGS="-std=c++11" 
   LINKFLAGS=""
   B2ARGS="toolset=gcc"
 fi
