@@ -29,7 +29,7 @@ if [ `uname` == Darwin ]; then
   LINKFLAGS="-mmacosx-version-min=${MACOSX_DEPLOYMENT_TARGET}"
 
   # Need to default to clang over g++ (though in later version g++ is clang)
-  B2ARGS="toolset=clang"
+  B2ARGS="toolset=clang -a"
   
   # If we want C++11 support, we need to enable these flags
   # AND change the version min >= 10.7
